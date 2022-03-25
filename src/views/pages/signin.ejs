@@ -1,0 +1,46 @@
+<html>
+<%- include('../partials/head', locals && locals.data ? locals.data : {}) %>
+
+<body>
+
+    <header>
+        <h1>Kiwami Discord Verification</h1>
+    </header>
+
+    <article class="verify">
+        <p>Please sign a signature request with your Wallet.</p>
+        <p>Your Address: <span id="walletAddressValue"></span></p>
+        <button id="signin"><span class="text">Verify now!</span>
+            <div class="dot-bricks"></div>
+        </button>
+    </article>
+    <article class="success hidden">
+        <h2 class="success-good">Welcome to Tengoku, you made it!</h2>
+        <p class="success-good">Your received the following roles in the Kiwami Discord Server:</p>
+        <h2 class="success-bad">An Error Has Occured!</h2>
+        <p class="roles"></p>
+    </article>
+    <article class="memes hidden">
+        <p class="meme-message">We are now verifiying your ownership, this can take a few seconds...</p>
+        <img class="meme-img" src="assets/images/kiwamibanner.jpg">
+    </article>
+
+    <div class="hidden error-popup" id="web3-error-popup">
+        <div class="content">
+            <p>You must use a web3 enabled browser with MetaMask or the MetaMask mobile app to verify.</p>
+            <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</a>
+        </div>
+    </div>
+
+    <div class="hidden error-popup" id="error-popup">
+        <div class="content">
+            <p id="errorText"></p>
+            <p class="standardDiscordErrorText">
+                Please generate a new request in Discord.
+            </p>
+        </div>
+    </div>
+</body>
+
+
+</html>
