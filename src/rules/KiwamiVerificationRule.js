@@ -79,7 +79,7 @@ class KiwamiVerificationRule {
             logger.error(err.stack);
         }
         try {
-            qualifiesForMediumRole = result.kiwami > 10;
+            qualifiesForMediumRole = result.kiwami > 9;
             await this.manageRoles(discordUser, mediumRole, qualifiesForMediumRole, roleAvail);
             executionResults.push({
                 role: "Shateigashira",
@@ -95,7 +95,7 @@ class KiwamiVerificationRule {
             logger.error(err.stack);
         }
         try {
-            qualifiesForLargeRole = result.kiwami > 25;
+            qualifiesForLargeRole = result.kiwami > 24;
             await this.manageRoles(discordUser, largeRole, qualifiesForLargeRole, roleAvail);
             executionResults.push({
                 role: "Wakagashira",
